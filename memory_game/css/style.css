@@ -80,6 +80,14 @@ footer {
     font-weight: 500;
 }
 
+.button {
+    background-color: #0D2C40;
+    color: white;
+    font-size 18px;
+    padding: 12px;
+    margin-top: 12px;
+}
+
 .test {
     font-family: "Raleway";
     color: #0D2C40;
@@ -101,6 +109,21 @@ footer {
 .name {
     color: #F15B31;
     font-weight: 700;
+}
+
+#counterP {
+    font-size: 30px;
+    font-family: "Raleway"
+}
+
+#counterC {
+    font-size: 30px;
+    font-family: "Raleway"
+}
+
+#teams {
+    font-size: 30px;
+    word-spacing: 30px;
 }
 
 .clearfix:after {
