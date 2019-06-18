@@ -1,7 +1,4 @@
 # wdi-fundamentals-memorygame
-Introductory project for General Assembly Boot Camp.
-Created the base game and added three bonus features.
-
 Added a permutation algorithm (Sattolo Cycle) that shuffles the cards in linear time complexity.
 
 Added a reset button that would flip the cards over again, and shuffle them.
