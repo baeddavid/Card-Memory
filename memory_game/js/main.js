@@ -22,6 +22,7 @@ let card = [
 ];
 let cardsInPlay = [];
 let pointsArr = [0,0];
+
 function checkForMatch() {
     if(cardsInPlay[0] === cardsInPlay[1]){
         alert('You found a match!');
