@@ -126,6 +126,11 @@ footer {
     word-spacing: 30px;
 }
 
+#timerText {
+    font-size: 30px;
+    font-family: "Raleway";    
+}
+
 .clearfix:after {
     visibility: hidden;
     display: block;

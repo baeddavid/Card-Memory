@@ -22,6 +22,9 @@ let card = [
 ];
 let cardsInPlay = [];
 let pointsArr = [0,0];
+let timeLeft = 5;
+let elem = document.getElementById('timer');
+let timerId = setInterval(countDown, 1000);
 
 function checkForMatch() {
     if(cardsInPlay[0] === cardsInPlay[1]){
@@ -38,10 +41,20 @@ function checkForMatch() {
 };
 
 function winCondition() {
-    if(pointsArr[0] === 5)
+    if(pointsArr[0] === 5) {
+        timeLeft = '0';
+        elem.innerHTML = timeLeft;
+        document.getElementById('myBtn').disabled = true;
         alert('Player 1 Wins!');
-    else if(pointsArr[1] === 5)
-        alert('Player 2 Wins!');
+        alert('Game is now over. Please refresh to start another game.')
+    }
+    else if(pointsArr[1] === 5) {
+        timeLeft = '0';
+        elem.innerHTML = timeLeft;
+        document.getElementById('myBtn').disabled = true;
+        alert('CPU Wins!');
+        alert('Game is now over. Please refresh to start another game.')
+    }
 }
 
 function flipCard() {
@@ -82,6 +95,7 @@ function helper() {
 
 function resetBoard() {
     document.getElementById("myBtn").addEventListener("click", helper);
+    document.getElementById("myBtn").addEventListener("click", () => timeLeft = 5);
 };
 
 // Shuffles the cards
@@ -94,5 +108,17 @@ function sattoloCycle(arr) {
     }
     return arr;
 };
+
+function countDown() {
+    if(timeLeft === 0) {
+        alert('You have lost the round');
+        pointsArr[1]++;
+        document.getElementById('counterC').innerHTML = pointsArr[1];
+        timeLeft = 5;
+    } else if(cardsInPlay.length == 2){}
+    else if (timeLeft > 0) {
+        elem.innerHTML = timeLeft--;
+    }
+}
 
 createBoard();
