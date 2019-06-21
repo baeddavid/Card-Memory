@@ -41,14 +41,14 @@ function checkForMatch() {
 };
 
 function winCondition() {
-    if(pointsArr[0] === 1) {
+    if(pointsArr[0] === 5) {
         timeLeft = '0';
         elem.innerHTML = timeLeft;
         document.getElementById('myBtn').disabled = true;
         alert('Player 1 Wins!');
         alert('Game is now over. Please refresh to start another game.')
     }
-    else if(pointsArr[1] === 1) {
+    else if(pointsArr[1] === 5) {
         timeLeft = '0';
         elem.innerHTML = timeLeft;
         document.getElementById('myBtn').disabled = true;
@@ -120,6 +120,7 @@ function countDown() {
     else if (timeLeft > 0) {
         elem.innerHTML = timeLeft--;
     }
+
 }
 
 createBoard();

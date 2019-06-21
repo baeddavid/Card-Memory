@@ -80,6 +80,10 @@ footer {
     font-weight: 500;
 }
 
+button {
+    border-radius: 25%;
+}
+
 .button {
     background-color: #0D2C40;
     color: white;
@@ -128,7 +132,7 @@ footer {
 
 #timerText {
     font-size: 30px;
-    font-family: "Raleway";    
+    font-family: "Raleway";
 }
 
 .clearfix:after {
@@ -142,4 +146,12 @@ footer {
 
 a:hover {
     border-color: white;
+}
+
+button:hover {
+    background-color: grey;
+}
+
+button:disabled {
+    background-color: red;
 }
