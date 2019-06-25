@@ -28,14 +28,15 @@ let timerId = setInterval(countDown, 1000);
 
 function checkForMatch() {
     if(cardsInPlay[0] === cardsInPlay[1]){
+        // Incorporated callbacks so that the cards will flip before displaying the alert
         let flipperP = setInterval(() => alert('You found a match!'), 250);
-        setTimeout(function() {clearInterval(flipperP);}, 275);
+        setTimeout(() => clearInterval(flipperP), 275);
         pointsArr[0]++;
         document.getElementById('counterP').innerHTML = pointsArr[0];
     }
      else{
-        let flipperC = setInterval(() => alert('You found a match!'), 250);
-        setTimeout(function() {clearInterval(flipperC);}, 275);
+        let flipperC = setInterval(() => alert('It was not a match'), 250);
+        setTimeout(() => clearInterval(flipperC), 275);
         pointsArr[1]++;
         document.getElementById('counterC').innerHTML = pointsArr[1];
     }
