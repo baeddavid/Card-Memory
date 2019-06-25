@@ -7,4 +7,7 @@ Added a live point counter. It will count to 5 before declaring either CPU or pl
 
 Added a count down timer that will automatically assign a point to the CPU if the player fails to make a move before the time is up.
 
+Added two callbacks so that the cards will flip first before sending an alert to the browser.
+
+
 
